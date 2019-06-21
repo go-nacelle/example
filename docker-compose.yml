@@ -1,0 +1,37 @@
+version: '3.7'
+services:
+  http-api:
+    build:
+      context: .
+      dockerfile: Dockerfile.http-api
+    environment:
+      - REDIS_ADDR=redis://redis:6379
+    ports:
+      - 5000:5000
+    depends_on:
+      - redis
+
+  grpc-api:
+    build:
+      context: .
+      dockerfile: Dockerfile.grpc-api
+    environment:
+      - REDIS_ADDR=redis://redis:6379
+    ports:
+      - 5001:5000
+    depends_on:
+      - redis
+
+  worker:
+    build:
+      context: .
+      dockerfile: Dockerfile.worker
+    environment:
+      - REDIS_ADDR=redis://redis:6379
+    depends_on:
+      - redis
+
+  redis:
+    image: redis
+    ports:
+      - 6379:6379
