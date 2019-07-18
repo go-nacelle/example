@@ -1,6 +1,6 @@
 # Nacelle Example
 
-A small example application to showcase the basic features of the [nacelle](https://github.com/go-nacelle/nacelle) microservice framework.
+A small example application to showcase the basic features of the [nacelle](https://nacelle.dev) microservice framework.
 
 ## Overview
 
@@ -18,7 +18,7 @@ It is suggested that you build and run with Docker. Simply run `docker-compose u
 
 ## Usage
 
-The following shows an example of a successful request to the [GitHub API](https://developer.github.com/v3/) user's list. The following output has been trimmed to pretty-print the first two results.
+The following shows an example of a successful request to the [GitHub API](https://developer.github.com/v3) user's list. The following output has been trimmed to pretty-print the first two results.
 
 ```bash
 $ curl -i http://localhost:5000/ -X POST -d 'http://github.com/api/users'
