@@ -1,6 +1,6 @@
 # Nacelle Example
 
-A small example application to showcase the basic features of the [nacelle](https://nacelle.dev) microservice framework.
+A small example application to showcase the basic features of the [nacelle](https://nacelle.dev) service framework.
 
 ## Overview
 
