@@ -1,13 +1,16 @@
 package internal
 
 import (
+	"context"
+
 	"github.com/garyburd/redigo/redis"
 	"github.com/go-nacelle/nacelle"
 )
 
 type RedisInitializer struct {
-	Services nacelle.ServiceContainer `service:"services"`
+	Services *nacelle.ServiceContainer `service:"services"`
 	conn     redis.Conn
+	config   *Config
 }
 
 type Config struct {
@@ -15,11 +18,17 @@ type Config struct {
 }
 
 func NewRedisInitializer() nacelle.Initializer {
-	return &RedisInitializer{}
+	return &RedisInitializer{
+		config: &Config{},
+	}
 }
 
-func (ri *RedisInitializer) Init(config nacelle.Config) error {
-	conn, err := dialFromConfig(config)
+func (ri *RedisInitializer) RegisterConfiguration(registry nacelle.ConfigurationRegistry) {
+	registry.Register(ri.config)
+}
+
+func (ri *RedisInitializer) Init(ctx context.Context) error {
+	conn, err := redis.DialURL(ri.config.RedisAddr)
 	if err != nil {
 		return err
 	}
@@ -31,18 +40,4 @@ func (ri *RedisInitializer) Init(config nacelle.Config) error {
 func (ri *RedisInitializer) Finalize() error {
 	ri.conn.Close()
 	return nil
-}
-
-func dialFromConfig(config nacelle.Config) (redis.Conn, error) {
-	redisConfig := &Config{}
-	if err := config.Load(redisConfig); err != nil {
-		return nil, err
-	}
-
-	conn, err := redis.DialURL(redisConfig.RedisAddr)
-	if err != nil {
-		return nil, err
-	}
-
-	return conn, nil
 }
