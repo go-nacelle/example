@@ -1,6 +1,6 @@
 module example
 
-go 1.12
+go 1.16
 
 require (
 	github.com/derision-test/go-mockgen v1.3.7 // indirect

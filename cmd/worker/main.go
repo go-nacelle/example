@@ -11,9 +11,7 @@ import (
 func setup(ctx context.Context, processes *nacelle.ProcessContainerBuilder, services *nacelle.ServiceContainer) error {
 	processes.RegisterInitializer(internal.NewRedisInitializer(), nacelle.WithMetaName("redis"))
 	processes.RegisterInitializer(internal.NewPubSubInitializer(), nacelle.WithMetaName("pubsub"))
-	ws1 := NewWorkerSpec()
-	ws2 := workerbase.NewWorker(ws1)
-	processes.RegisterProcess(ws2, nacelle.WithMetaName("worker"))
+	processes.RegisterProcess(workerbase.NewWorker(NewWorkerSpec()), nacelle.WithMetaName("worker"))
 	return nil
 }
 
