@@ -8,8 +8,8 @@ import (
 )
 
 type PubSubInitializer struct {
-	Services nacelle.ServiceContainer `service:"services"`
-	Config   nacelle.Config           `service:"config"`
+	Services *nacelle.ServiceContainer `service:"services"`
+	Config   *nacelle.Config           `service:"config"`
 	conn     redis.PubSubConn
 }
 

@@ -8,8 +8,8 @@ import (
 )
 
 type RedisInitializer struct {
-	Services nacelle.ServiceContainer `service:"services"`
-	Config   nacelle.Config           `service:"config"`
+	Services *nacelle.ServiceContainer `service:"services"`
+	Config   *nacelle.Config           `service:"config"`
 	conn     redis.Conn
 }
 
@@ -36,7 +36,7 @@ func (ri *RedisInitializer) Finalize() error {
 	return nil
 }
 
-func dialFromConfig(config nacelle.Config) (redis.Conn, error) {
+func dialFromConfig(config *nacelle.Config) (redis.Conn, error) {
 	redisConfig := &Config{}
 	if err := config.Load(redisConfig); err != nil {
 		return nil, err
