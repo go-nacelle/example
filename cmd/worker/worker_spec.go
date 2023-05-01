@@ -8,7 +8,7 @@ import (
 	"example/internal"
 
 	"github.com/garyburd/redigo/redis"
-	"github.com/go-nacelle/nacelle"
+	nacelle "github.com/go-nacelle/nacelle/v2"
 	"github.com/go-nacelle/workerbase"
 )
 
@@ -22,7 +22,7 @@ func NewWorkerSpec() workerbase.WorkerSpec {
 	return &WorkerSpec{}
 }
 
-func (ws *WorkerSpec) Init(config nacelle.Config) error {
+func (ws *WorkerSpec) Init(ctx context.Context) error {
 	return nil
 }
 

@@ -1,12 +1,15 @@
 package internal
 
 import (
+	"context"
+
 	"github.com/garyburd/redigo/redis"
-	"github.com/go-nacelle/nacelle"
+	nacelle "github.com/go-nacelle/nacelle/v2"
 )
 
 type RedisInitializer struct {
-	Services nacelle.ServiceContainer `service:"services"`
+	Services *nacelle.ServiceContainer `service:"services"`
+	Config   *nacelle.Config           `service:"config"`
 	conn     redis.Conn
 }
 
@@ -18,8 +21,8 @@ func NewRedisInitializer() nacelle.Initializer {
 	return &RedisInitializer{}
 }
 
-func (ri *RedisInitializer) Init(config nacelle.Config) error {
-	conn, err := dialFromConfig(config)
+func (ri *RedisInitializer) Init(ctx context.Context) error {
+	conn, err := dialFromConfig(ri.Config)
 	if err != nil {
 		return err
 	}
@@ -33,7 +36,7 @@ func (ri *RedisInitializer) Finalize() error {
 	return nil
 }
 
-func dialFromConfig(config nacelle.Config) (redis.Conn, error) {
+func dialFromConfig(config *nacelle.Config) (redis.Conn, error) {
 	redisConfig := &Config{}
 	if err := config.Load(redisConfig); err != nil {
 		return nil, err

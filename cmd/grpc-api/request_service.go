@@ -6,7 +6,7 @@ import (
 	"example/proto"
 
 	"github.com/garyburd/redigo/redis"
-	"github.com/go-nacelle/nacelle"
+	nacelle "github.com/go-nacelle/nacelle/v2"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 )

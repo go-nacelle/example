@@ -1,14 +1,16 @@
 package main
 
 import (
+	"context"
 	"encoding/json"
 	"io/ioutil"
 	"net/http"
 
 	"example/internal"
+
 	"github.com/garyburd/redigo/redis"
 	"github.com/go-nacelle/httpbase"
-	"github.com/go-nacelle/nacelle"
+	nacelle "github.com/go-nacelle/nacelle/v2"
 )
 
 type ServerInitializer struct {
@@ -20,7 +22,7 @@ func NewServerInitializer() httpbase.ServerInitializer {
 	return &ServerInitializer{}
 }
 
-func (si *ServerInitializer) Init(config nacelle.Config, server *http.Server) error {
+func (si *ServerInitializer) Init(ctx context.Context, server *http.Server) error {
 	server.Handler = http.HandlerFunc(si.handle)
 	return nil
 }
