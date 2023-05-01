@@ -700,10 +700,12 @@ github.com/go-nacelle/httpbase v1.0.2-0.20230430233630-c1067e79f57c h1:pHZJFsUPb
 github.com/go-nacelle/httpbase v1.0.2-0.20230430233630-c1067e79f57c/go.mod h1:EoUoXCgZ5e0LnexfPp3tSXm5tCdiW+Kl1hERWcoYqqc=
 github.com/go-nacelle/log/v2 v2.0.1 h1:vOkiKz/pZannZIpH2yDV03hUKbtr6uLvrWklk8N6eR0=
 github.com/go-nacelle/log/v2 v2.0.1/go.mod h1:KpBIkm+Rc9qzdwUKQlhxbN0slXSKi/FhDWY5oiFVhY8=
-github.com/go-nacelle/nacelle/v2 v2.1.0 h1:a1IU/1u3vsNEBw6XiXNc7c8qZsSz2QjY9RCc1AxIGao=
 github.com/go-nacelle/nacelle/v2 v2.1.0/go.mod h1:bOP3vSUnbF6M8gDp4uhhuxB2q5jaZtG/CIjkuhSBG6U=
-github.com/go-nacelle/process/v2 v2.0.1 h1:UEh+yr1Y+OdRU+LpwpyLHcXtdjRlZVIcRY+/m5GfuXY=
+github.com/go-nacelle/nacelle/v2 v2.1.1 h1:rHPbzqOGXThSZm9xF301ywJdHmL8QXaDANcmefyrqfM=
+github.com/go-nacelle/nacelle/v2 v2.1.1/go.mod h1:j+rbDQaYWQcPwiZiTvPdb5/YzM3BCnUIZJfkxXhb69s=
 github.com/go-nacelle/process/v2 v2.0.1/go.mod h1:rqzTvXR+gH0/f+7yBrxbVs8ZKL7AhYzNCxWvHIJF4Mk=
+github.com/go-nacelle/process/v2 v2.1.0 h1:T7cN5KUhhDJJ4qd38V7LmuQLKTvmUAK4ZXEHrL8MHeM=
+github.com/go-nacelle/process/v2 v2.1.0/go.mod h1:rqzTvXR+gH0/f+7yBrxbVs8ZKL7AhYzNCxWvHIJF4Mk=
 github.com/go-nacelle/service/v2 v2.0.1 h1:Pnxbqnpv2w0ntzYIMkRwCxoYbvvu35r9b4hTVrt2ZSE=
 github.com/go-nacelle/service/v2 v2.0.1/go.mod h1:o5K7mx7JaIxDbyfzFGH+JkRlTXUudjyx9Fx+AGHuk6I=
 github.com/go-nacelle/workerbase v1.0.3-0.20230430235119-d73cc611c337 h1:2Rqf/YiMKBw5x+b8nbmLXZ9DFzZxpIsuyswDskh5hLY=
