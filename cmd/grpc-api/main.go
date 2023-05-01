@@ -1,14 +1,16 @@
 package main
 
 import (
+	"context"
 	"example/internal"
+
 	"github.com/go-nacelle/grpcbase"
-	"github.com/go-nacelle/nacelle"
+	nacelle "github.com/go-nacelle/nacelle/v2"
 )
 
-func setup(processes nacelle.ProcessContainer, services nacelle.ServiceContainer) error {
-	processes.RegisterInitializer(internal.NewRedisInitializer(), nacelle.WithInitializerName("redis"))
-	processes.RegisterProcess(grpcbase.NewServer(NewServerInitializer()), nacelle.WithProcessName("grpc-server"))
+func setup(ctx context.Context, processes *nacelle.ProcessContainerBuilder, services *nacelle.ServiceContainer) error {
+	processes.RegisterInitializer(internal.NewRedisInitializer(), nacelle.WithMetaName("redis"))
+	processes.RegisterProcess(grpcbase.NewServer(NewServerInitializer()), nacelle.WithMetaName("grpc-server"))
 	return nil
 }
 

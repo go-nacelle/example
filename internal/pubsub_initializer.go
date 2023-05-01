@@ -1,12 +1,15 @@
 package internal
 
 import (
+	"context"
+
 	"github.com/garyburd/redigo/redis"
-	"github.com/go-nacelle/nacelle"
+	nacelle "github.com/go-nacelle/nacelle/v2"
 )
 
 type PubSubInitializer struct {
 	Services nacelle.ServiceContainer `service:"services"`
+	Config   nacelle.Config           `service:"config"`
 	conn     redis.PubSubConn
 }
 
@@ -14,8 +17,8 @@ func NewPubSubInitializer() nacelle.Initializer {
 	return &PubSubInitializer{}
 }
 
-func (psi *PubSubInitializer) Init(config nacelle.Config) error {
-	conn, err := dialFromConfig(config)
+func (psi *PubSubInitializer) Init(ctx context.Context) error {
+	conn, err := dialFromConfig(psi.Config)
 	if err != nil {
 		return err
 	}

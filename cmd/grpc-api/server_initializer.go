@@ -1,11 +1,12 @@
 package main
 
 import (
+	"context"
 	"example/proto"
 
 	"github.com/garyburd/redigo/redis"
 	"github.com/go-nacelle/grpcbase"
-	"github.com/go-nacelle/nacelle"
+	nacelle "github.com/go-nacelle/nacelle/v2"
 	"google.golang.org/grpc"
 )
 
@@ -18,7 +19,7 @@ func NewServerInitializer() grpcbase.ServerInitializer {
 	return &ServerInitializer{}
 }
 
-func (si *ServerInitializer) Init(config nacelle.Config, server *grpc.Server) error {
+func (si *ServerInitializer) Init(ctx context.Context, server *grpc.Server) error {
 	proto.RegisterRequestServiceServer(server, NewRequestService(si.Logger, si.Redis))
 	return nil
 }
