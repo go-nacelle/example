@@ -696,8 +696,12 @@ github.com/go-nacelle/config/v3 v3.0.0 h1:YseTUtwKC21rgWNdBh+f0A5ANnh7kSMqGkB2JH
 github.com/go-nacelle/config/v3 v3.0.0/go.mod h1:cj+WGluCHOR/5gup6dx3wunXsEGEbxmCiB6cYa9iNYQ=
 github.com/go-nacelle/grpcbase v1.0.2-0.20230430235425-9f3001284b08 h1:s39XhFasbcBTOVas209DJz3QBlP3wuI1+u0XQzArs14=
 github.com/go-nacelle/grpcbase v1.0.2-0.20230430235425-9f3001284b08/go.mod h1:q9qlLQ/vw2QEWcerz1Zz4O4mEIEotOnKRJAiNJXeSys=
+github.com/go-nacelle/grpcbase v1.0.2-0.20230501124005-2a6c96e4add2 h1:kSschMt2NM+M0tinuIWgcgAwoxQ/1zwg8/I/iCM6kiU=
+github.com/go-nacelle/grpcbase v1.0.2-0.20230501124005-2a6c96e4add2/go.mod h1:q9qlLQ/vw2QEWcerz1Zz4O4mEIEotOnKRJAiNJXeSys=
 github.com/go-nacelle/httpbase v1.0.2-0.20230430233630-c1067e79f57c h1:pHZJFsUPb/vdYLbw0CBtoEszmKBHmRCU50ezoxHU85Q=
 github.com/go-nacelle/httpbase v1.0.2-0.20230430233630-c1067e79f57c/go.mod h1:EoUoXCgZ5e0LnexfPp3tSXm5tCdiW+Kl1hERWcoYqqc=
+github.com/go-nacelle/httpbase v1.0.2-0.20230501123826-2771fb8a0d33 h1:CA04ncmul1A9J7GtPundj45xuZIy8Rf/Ng58Z4TPGb8=
+github.com/go-nacelle/httpbase v1.0.2-0.20230501123826-2771fb8a0d33/go.mod h1:EoUoXCgZ5e0LnexfPp3tSXm5tCdiW+Kl1hERWcoYqqc=
 github.com/go-nacelle/log/v2 v2.0.1 h1:vOkiKz/pZannZIpH2yDV03hUKbtr6uLvrWklk8N6eR0=
 github.com/go-nacelle/log/v2 v2.0.1/go.mod h1:KpBIkm+Rc9qzdwUKQlhxbN0slXSKi/FhDWY5oiFVhY8=
 github.com/go-nacelle/nacelle/v2 v2.1.0/go.mod h1:bOP3vSUnbF6M8gDp4uhhuxB2q5jaZtG/CIjkuhSBG6U=
@@ -710,6 +714,8 @@ github.com/go-nacelle/service/v2 v2.0.1 h1:Pnxbqnpv2w0ntzYIMkRwCxoYbvvu35r9b4hTV
 github.com/go-nacelle/service/v2 v2.0.1/go.mod h1:o5K7mx7JaIxDbyfzFGH+JkRlTXUudjyx9Fx+AGHuk6I=
 github.com/go-nacelle/workerbase v1.0.3-0.20230430235119-d73cc611c337 h1:2Rqf/YiMKBw5x+b8nbmLXZ9DFzZxpIsuyswDskh5hLY=
 github.com/go-nacelle/workerbase v1.0.3-0.20230430235119-d73cc611c337/go.mod h1:aDQpxZt7CHmvC8m4cqAkgW00KQpDuPf8NiEl3TldOrY=
+github.com/go-nacelle/workerbase v1.0.3-0.20230501123936-b959b809e100 h1:4vz/UrCMOLT0kzTvDE5d/CP7yny57mwjJ0+MVdwVXWk=
+github.com/go-nacelle/workerbase v1.0.3-0.20230501123936-b959b809e100/go.mod h1:aDQpxZt7CHmvC8m4cqAkgW00KQpDuPf8NiEl3TldOrY=
 github.com/go-pdf/fpdf v0.5.0/go.mod h1:HzcnA+A23uwogo0tp9yU+l3V+KXhiESpt1PMayhOh5M=
 github.com/go-pdf/fpdf v0.6.0/go.mod h1:HzcnA+A23uwogo0tp9yU+l3V+KXhiESpt1PMayhOh5M=
 github.com/go-task/slim-sprig v0.0.0-20210107165309-348f09dbbbc0/go.mod h1:fyg7847qk6SyHyPtNmDHnmrv/HOrqktSC+C9fM+CJOE=
